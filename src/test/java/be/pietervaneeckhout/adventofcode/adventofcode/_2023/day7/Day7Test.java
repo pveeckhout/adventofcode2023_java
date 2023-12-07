@@ -19,22 +19,37 @@ class Day7Test {
                         Map.of('A', 5), new BigInteger("1000000")
                 ),
                 Arguments.of(
+                        Map.of('A', 4, 'J', 1), new BigInteger("1000000")
+                ),
+                Arguments.of(
+                        Map.of('A', 3, 'J', 2), new BigInteger("1000000")
+                ),
+                Arguments.of(
+                        Map.of('A', 2, 'J', 3), new BigInteger("1000000")
+                ),
+                Arguments.of(
+                        Map.of('A', 1, 'J', 4), new BigInteger("1000000")
+                ),
+                Arguments.of(
+                        Map.of('J', 5), new BigInteger("1000000")
+                ),
+                Arguments.of(
                         Map.of('A', 4, 'K', 1), new BigInteger("100000")
                 ),
                 Arguments.of(
                         Map.of('A', 3, 'K', 2), new BigInteger("10000")
                 ),
                 Arguments.of(
-                        Map.of('A', 3, 'K', 1, 'J', 1), new BigInteger("1000")
+                        Map.of('A', 3, 'K', 1, '3', 1), new BigInteger("1000")
                 ),
                 Arguments.of(
-                        Map.of('A', 2, 'K', 2, 'J', 1), new BigInteger("100")
+                        Map.of('A', 2, 'K', 2, '3', 1), new BigInteger("100")
                 ),
                 Arguments.of(
-                        Map.of('A', 2, 'K', 1, 'J', 1, 'T', 1), new BigInteger("10")
+                        Map.of('A', 2, 'K', 1, '3', 1, 'T', 1), new BigInteger("10")
                 ),
                 Arguments.of(
-                        Map.of('A', 1, 'K', 1, 'J', 1, 'T', 1, '4', 1), new BigInteger("1")
+                        Map.of('A', 1, 'K', 1, '3', 1, 'T', 1, '4', 1), new BigInteger("1")
                 )
         );
     }
@@ -42,46 +57,46 @@ class Day7Test {
     public static Stream<Arguments> CalculatedSequenceRankTestCases() {
         return Stream.of(
                 Arguments.of(
-                        new char[]{'1'}, new BigInteger("1")
+                        new char[]{'1'}, new BigInteger("101")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2'}, new BigInteger("102")
+                        new char[]{'1', '2'}, new BigInteger("10102")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3'}, new BigInteger("10203")
+                        new char[]{'1', '2', '3'}, new BigInteger("1010203")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4'}, new BigInteger("1020304")
+                        new char[]{'1', '2', '3', '4'}, new BigInteger("101020304")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5'}, new BigInteger("102030405")
+                        new char[]{'1', '2', '3', '4', '5'}, new BigInteger("10102030405")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6'}, new BigInteger("10203040506")
+                        new char[]{'1', '2', '3', '4', '5', '6'}, new BigInteger("1010203040506")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6', '7'}, new BigInteger("1020304050607")
+                        new char[]{'1', '2', '3', '4', '5', '6', '7'}, new BigInteger("101020304050607")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8'}, new BigInteger("102030405060708")
+                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8'}, new BigInteger("10102030405060708")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9'}, new BigInteger("10203040506070809")
+                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9'}, new BigInteger("1010203040506070809")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T'}, new BigInteger("1020304050607080910")
+                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T'}, new BigInteger("101020304050607080910")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J'}, new BigInteger("102030405060708091001")
+                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J'}, new BigInteger("10102030405060708091001")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q'}, new BigInteger("10203040506070809100112")
+                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q'}, new BigInteger("1010203040506070809100112")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'}, new BigInteger("1020304050607080910011213")
+                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'}, new BigInteger("101020304050607080910011213")
                 ),
                 Arguments.of(
-                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'}, new BigInteger("102030405060708091001121314")
+                        new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'}, new BigInteger("10102030405060708091001121314")
                 )
         );
     }

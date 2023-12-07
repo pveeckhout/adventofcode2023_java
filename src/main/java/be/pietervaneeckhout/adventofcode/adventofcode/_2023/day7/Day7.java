@@ -48,12 +48,12 @@ public class Day7 {
 
         private final BigInteger bet;
         private final char[] hand;
-        public final BigInteger rank;
+        public final BigInteger power;
 
         public CamelHand(char[] hand, String bet) {
             this.hand = hand;
             this.bet = new BigInteger(bet);
-            this.rank = calculateTypeRank(calculateCharacterCounts(hand)).multiply(calculatedSequenceRank(hand));
+            this.power = calculateTypeRank(calculateCharacterCounts(hand)).multiply(calculatedSequenceRank(hand));
         }
 
         public static BigInteger calculateTypeRank(Map<Character, Integer> characterCounts) {
@@ -124,7 +124,7 @@ public class Day7 {
         @Override
         public int compareTo(CamelHand o) {
             // compare based on rank, descending
-            return this.rank.compareTo(o.rank);
+            return this.power.compareTo(o.power);
         }
     }
 }
