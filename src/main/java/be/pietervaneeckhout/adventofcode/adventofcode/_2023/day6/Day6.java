@@ -14,12 +14,9 @@ public class Day6 {
     // formula -> d = t * h
     // formula -> T = t + h
     // formula -> (T - h) h  > d
-    // formula -> Th - h^2 > d
     // formula -> h > 0
     // formula -> T = 7
     // formula -> d > 9
-
-    // solve for d > (T - h) * (2 ^ (h-1)) With T and d given
 
     public static void main(String[] args) {
         Integer raceSolutionsAmountMultiplied = parseRacesFromInput(Day6Input.input)
